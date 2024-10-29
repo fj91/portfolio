@@ -1,6 +1,10 @@
 import React from "react";
 
 export default function Contact() {
+    const apiKey = process.env.REACT_APP_EMBED_MAP_KEY;
+    console.log(apiKey);
+    const srcURL = `https://www.google.com/maps/embed/v1/place?q=Miami,+Florida&key=${apiKey}`
+
     return (
         <section id="contact" className="relative">
             <div className="container px-5 py-10 mx-auto flex sm:flex-nowrap flex-wrap">
@@ -14,7 +18,7 @@ export default function Contact() {
                         marginHeight={0}
                         marginWidth={0}
                         style={{ filter: "opacity(0.7)" }}
-                        src="https://www.google.com/maps/embed/v1/place?q=Miami,+Florida&key=AIzaSyBFw0Qbyq9zTFTd-tUY6dZWTgaQzuU17R8"
+                        src={srcURL}
                     />
                     <div className="bg-gray-900 relative flex flex-wrap py-6 rounded shadow-md">
                         <div className="lg:w-2/2 px-6">
